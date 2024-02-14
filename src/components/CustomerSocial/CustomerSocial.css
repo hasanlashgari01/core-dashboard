@@ -1,0 +1,26 @@
+.customer-social {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 1.5rem;
+  border-radius: 1.2rem;
+  gap: 8px;
+  border: 2px solid var(--theme-border-1);
+  transition: var(--transition-slowly), border 800ms cubic-bezier(0.68, 1.02, 0, 0.99);
+}
+
+.customer-social:hover {
+  background-color: var(--theme-border-1);
+}
+
+.customer-social__name {
+  font-family: "Inter-Bold";
+  color: var(--theme-color-2);
+}
+
+@media screen and (max-width: 576px) {
+  .customer-social__name {
+    display: none;
+  }
+}

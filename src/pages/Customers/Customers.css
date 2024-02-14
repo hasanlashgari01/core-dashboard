@@ -1,0 +1,4 @@
+.customers-wrapper {
+    display: flex;
+    gap: 8px;
+}

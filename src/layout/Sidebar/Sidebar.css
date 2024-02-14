@@ -1,0 +1,213 @@
+.sidebar {
+  position: fixed;
+  width: 34rem;
+  height: 100%;
+  padding: 2.4rem;
+  background-color: var(--theme-bg-color-1);
+  transition: var(--transition-slowly);
+  z-index: 9999;
+}
+
+.sidebar__logo:hover img {
+  rotate: -180deg;
+  transition: all 500ms ease-in-out;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 4.8rem;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu__item,
+.menu__link {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  color: var(--theme-color-1);
+  font-family: "Inter-SemiBold";
+  transition: var(--transition-slowly), color 0.3s ease, box-shadow 1s ease-in-out;
+}
+
+.menu__item {
+  flex-direction: column;
+  height: 48px;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+.menu__item.menu__link--active {
+  overflow: visible;
+}
+
+.menu__item-wrapper {
+  height: 4.8rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu__item-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.menu__item-list {
+  padding-left: 3.6rem;
+  height: 0;
+  background-color: red;
+  transition: 0.5s ease;
+}
+
+.menu__link:hover {
+  color: #1a1d1f;
+}
+
+.menu__link--active {
+  background-color: #efefef;
+  color: #1a1d1f;
+  box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.05), inset 0px 1px 1px #ffffff;
+  transition: var(--transition-slowly), color 0.3s ease, box-shadow 1s ease-in-out;
+}
+
+.sidebar-theme {
+  position: absolute;
+  left: 2.4rem;
+  bottom: 2.4rem;
+  right: 2.4rem;
+}
+
+.sidebar-theme__wrapper {
+  position: relative;
+  border-radius: 4rem;
+  background-color: #f4f4f4;
+  transition: var(--transition-slowly);
+}
+
+body.dark .sidebar-theme__wrapper {
+  background-color: #111315;
+  transition: var(--transition-slowly);
+}
+
+.sidebar-theme__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  gap: 4px;
+  margin: 4px;
+}
+
+.sidebar-theme__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+  font-family: "Inter-SemiBold";
+  cursor: pointer;
+  z-index: 1;
+}
+
+.sidebar-theme__dark {
+  color: #6f767e;
+  background-color: unset !important;
+}
+
+.sidebar-theme__bg {
+  position: absolute;
+  width: 50%;
+  margin: 4px;
+  border-radius: 2rem;
+  height: 3.2rem;
+  transition: background-color 8000ms cubic-bezier(0.68, 1.02, 0, 0.99), 400ms linear;
+}
+
+.sidebar-theme__bg-light {
+  left: 4px;
+  background-color: #fcfcfc;
+  box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.25), inset 0px -1px 1px rgba(0, 0, 0, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.25);
+}
+
+.sidebar-theme__bg-dark {
+  left: 47.5%;
+  background: #272b30;
+  box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.25), inset 0px -1px 1px rgba(0, 0, 0, 0.49), inset 0px 2px 1px rgba(255, 255, 255, 0.06);
+}
+
+.sidebar-theme__switch {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+  .sidebar {
+    width: 9.6rem;
+  }
+
+  .menu__link-text {
+    display: none;
+  }
+
+  .sidebar-theme__wrapper {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .sidebar-theme__content {
+    display: none;
+  }
+
+  .sidebar-theme__switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .sidebar-theme__switch img {
+    width: 80%;
+    height: 80%;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar {
+    position: fixed;
+    background-color: unset;
+    padding: 0;
+    width: 100vw;
+    transition: 800ms cubic-bezier(0.68, 1.02, 0, 0.99);
+    transform: translateX(-100%);
+  }
+
+  .logo-app {
+    background-color: unset;
+    padding: 2.4rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .sidebar__wrapper {
+    background-color: #fcfcfc;
+    height: calc(100vh - 10.32rem);
+    padding: 2.4rem;
+  }
+
+  body.dark .sidebar__wrapper {
+    background-color: #1a1d1f;
+    box-shadow: inset 1px 0px 0px #111315;
+    transition: var(--transition-slowly);
+  }
+}

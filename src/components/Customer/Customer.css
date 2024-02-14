@@ -1,0 +1,29 @@
+.customer {
+  padding-block: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  flex-basis: 15rem;
+  border-radius: 1.6rem;
+  transition: var(--transition-slowly);
+}
+
+.customer:hover {
+  background-color: #f4f4f4;
+}
+
+.customer-profile {
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.customer-name {
+  font-size: 1.3rem;
+  color: var(--theme-color-3);
+  text-align: center;
+  font-family: "Inter-Medium";
+  letter-spacing: -1%;
+}

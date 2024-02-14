@@ -1,0 +1,119 @@
+:root {
+  /* Background Color */
+  --theme-bg-color-1: #fcfcfc;
+  --theme-bg-color-2: #f4f4f4;
+  /* Color */
+  --theme-color-1: #6f767e;
+  --theme-color-2: #1a1d1f;
+  --theme-color-3: #272b30;
+  /* Border Color */
+  --theme-border-1: #efefef;
+  --transition-slowly: background-color 800ms cubic-bezier(0.68, 1.02, 0, 0.99);
+}
+
+:root body.dark {
+  /* Background Color */
+  --theme-bg-color-1: #1a1d1f;
+  --theme-bg-color-2: #272b30;
+  /* Color */
+  --theme-color-1: #fcfcfc;
+  --theme-color-2: #fcfcfc;
+  --theme-color-3: #efefef;
+  /* Border Color */
+  --theme-border-1: #272b30;
+}
+
+/* Dark Mode */
+
+body.dark .sidebar-theme__light,
+body.dark .menu__link,
+body.dark .menu__item-text {
+  color: #6f767e;
+}
+
+body.dark .menu__link--active,
+body.dark .sidebar-theme__dark,
+body.dark .header-search__input,
+body.dark .overview-header__item--active {
+  background-color: #272b30;
+  color: #fcfcfc;
+  box-shadow: none;
+  box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.25), inset 0px -1px 1px rgba(0, 0, 0, 0.04), inset 0px 2px 0px rgba(255, 255, 255, 0.06);
+  transition: var(--transition-slowly), box-shadow 1s ease-in-out;
+}
+
+body.dark .header-search__input:focus,
+body.dark .main,
+body.dark {
+  background-color: #111315;
+}
+
+body.dark .popular-product__status--active,
+body.dark .popular-product__status--deactive {
+  background-color: rgba(131, 191, 110, 0.15);
+}
+
+body.dark .overview-header,
+body.dark .customer:hover {
+  background-color: rgba(17, 19, 21, 0.5);
+}
+/* Table */
+body.dark .products-table__tbody-status-active {
+  background-color: rgba(131, 191, 110, 0.15);
+}
+
+body.dark .products-table__tbody-status-deactive {
+  background-color: #312524;
+}
+
+body.dark .products-table--bg-color {
+  background-color: #33383f;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("../public/fonts/Inter-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("../public/fonts/Inter-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url("../public/fonts/Inter-SemiBold.ttf") format("truetype");
+}
+
+/* Base */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Inter-Medium";
+  line-height: 1.6;
+  transition: var(--transition-slowly);
+}
+
+body > * {
+  transition: color 400ms ease !important;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Inter-Medium";
+}
+
+/*  */
